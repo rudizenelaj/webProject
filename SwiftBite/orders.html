@@ -12,9 +12,9 @@
     <!-- Custom css file link -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body> 
+<body>
 
-<!-- Header section starts -->
+    <!-- Header section starts -->
 
 <header class="header">
 
@@ -46,22 +46,28 @@
 
 <!-- Header section ends -->
 
-<!-- Home section starts -->
-<section class="home" id="home">
-
-    <div class="content">
-        <h3>"SwiftBite - Your Express Ticket to Culinary Delight!"</h3>
-        <p><i>"Welcome to SwiftBite, where speed meets flavor in a seamless culinary journey. 
-            We understand that your cravings wait for no one, and neither should you. 
-            With SwiftBite, we've redefined the art of food delivery, bringing you a curated 
-            selection of delectable dishes delivered to your doorstep with unprecedented speed. 
-            Whether you're in the mood for sizzling stir-fry, gourmet pizzas, or exotic desserts, 
-            SwiftBite is your express ticket to culinary delight that's the SwiftBite promise."</i></p>
-            <a href="order.html" class="btn">Get your order now</a>
-    </div>
-
+<!-- Orders section starts -->
+<section class="orders" id="orders">
+    <h1 class="heading">All <span>Orders</span></h1>
+    <table id="all-orders-table">
+        <thead>
+            <tr>
+                <th>Customer Name</th>
+                <th>Items</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="all-orders-body"></tbody> <!-- Add this tbody element -->
+    </table>
 </section>
-<!-- Home section ends -->
+<!-- Orders section ends -->
+
+    
+    
+
+    <!-- custom js file link -->
+    <script src="../SwiftBite/js/script.js"></script>
     
 </body>
 </html>

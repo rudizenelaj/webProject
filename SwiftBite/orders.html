@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,62 +13,64 @@
     <!-- Custom css file link -->
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
     <!-- Header section starts -->
 
-<header class="header">
+    <header class="header">
 
-    <a href="index.html" class="logo">
-        <img src="images/logo.png" alt="">
-    </a>
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="">
+        </a>
 
-    <nav class="navbar">
+        <nav class="navbar">
 
-        <a href="index.html">Home</a>
-        <a href="order.html">Order</a>
-        <a href="orders.html">Orders</a>
+            <a href="index.html">Home</a>
+            <a href="order.html">Order</a>
+            <a href="orders.html">Orders</a>
 
-    </nav>
+        </nav>
 
-    <div class="icons">
+        <div class="icons">
 
-        <div class="fas fa-search" id="search-btn"></div>
-        <div class="fas fa-bars" id="menu-btn"></div>
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-bars" id="menu-btn"></div>
 
-    </div>
+        </div>
 
-    <div class="search-form">
-        <input type="search" id="search-box" placeholder="search food...">
-        <label for="search-box" class="fas fa-search"></label>
-    </div>
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="search food...">
+            <label for="search-box" class="fas fa-search"></label>
+        </div>
 
-</header>
+    </header>
 
-<!-- Header section ends -->
+    <!-- Header section ends -->
 
-<!-- Orders section starts -->
-<section class="orders" id="orders">
-    <h1 class="heading">All <span>Orders</span></h1>
-    <table id="all-orders-table">
-        <thead>
-            <tr>
-                <th>Customer Name</th>
-                <th>Items</th>
-                <th>Price</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody id="all-orders-body"></tbody> <!-- Add this tbody element -->
-    </table>
-</section>
-<!-- Orders section ends -->
+    <!-- Orders section starts -->
+    <section class="orders" id="orders">
+        <h1 class="heading">All <span>Orders</span></h1>
+        <table id="all-orders-table">
+            <thead>
+                <tr>
+                    <th>Customer Name</th>
+                    <th>Items</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="all-orders-body"></tbody> <!-- Add this tbody element -->
+        </table>
+    </section>
+    <!-- Orders section ends -->
 
-    
-    
+
+
 
     <!-- custom js file link -->
-    <script src="../SwiftBite/js/script.js"></script>
-    
+    <script src="../SwiftBite/js/orders.js"></script>
+
 </body>
+
 </html>

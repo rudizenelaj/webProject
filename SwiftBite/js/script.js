@@ -26,6 +26,19 @@ document.addEventListener("DOMContentLoaded", function () {
   let orderNumber = 1;
   let currentOrder = {}; // Object to keep track of the current order
 
+  fetch('http://localhost:3000/products')
+    .then(response => response.json())
+    .then(products => {
+      const productListElement = document.getElementById('productList');
+      products.forEach(product => {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${product.id}: ${product.name} - $${product.price}`;
+        productListElement.appendChild(listItem);
+      });
+    })
+    .catch(error => console.error('Error fetching products:', error));
+
+
   // Function to handle item clicks and update the current order
   function handleItemClick(itemName, itemPrice) {
     if (currentOrder[itemName]) {
@@ -100,18 +113,18 @@ document.addEventListener("DOMContentLoaded", function () {
           );
         }, 0)
         .toFixed(2);
-        var existingOrders = JSON.parse(localStorage.getItem("currentOrder")) || [];
-        
-        // Create an order object
-        const order = {
-          customerName: customerName,
-          items: getAllOrderedItems(), // Assuming this function returns a string representation of all items
-          totalOrderPrice: totalOrderPrice,
-        };
-        
-        existingOrders.push(order);
-        localStorage.setItem('currentOrder',JSON.stringify(existingOrders));
-        
+      var existingOrders = JSON.parse(localStorage.getItem("currentOrder")) || [];
+
+      // Create an order object
+      const order = {
+        customerName: customerName,
+        items: getAllOrderedItems(), // Assuming this function returns a string representation of all items
+        totalOrderPrice: totalOrderPrice,
+      };
+
+      existingOrders.push(order);
+      localStorage.setItem('currentOrder', JSON.stringify(existingOrders));
+
 
       // Refresh the page for a new order
       window.location.href = "order.html";

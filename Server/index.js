@@ -1,17 +1,30 @@
-// index.js
 const express = require('express');
-const productsRouter = require('./products');
-const ordersRouter = require('./orders');
+const products = require('./products'); // Import products.js
+const orders = require('./orders'); // Import orders.js
+
 const app = express();
-const PORT = process.env.PORT || 3000;
+const port = 3000;
 
-// Middleware to parse JSON bodies
-app.use(express.json());
+app.get('/products', async (req, res) => {
+  try {
+    const productList = await products.getAllProducts();
+    res.json(productList);
+  } catch (error) {
+    console.error('Error fetching products:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
 
-// Routes
-app.use('/products', productsRouter);
-app.use('/orders', ordersRouter);
+app.get('/orders', async (req, res) => {
+  try {
+    const orderList = await orders.getAllOrders();
+    res.json(orderList);
+  } catch (error) {
+    console.error('Error fetching orders:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
 
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });

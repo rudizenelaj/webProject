@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,152 +13,153 @@
     <!-- Custom css file link -->
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
 
 
     <!-- Header section starts -->
 
-<header class="header">
+    <header class="header">
 
-    <a href="index.html" class="logo">
-        <img src="images/logo.png" alt="">
-    </a>
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="">
+        </a>
 
-    <nav class="navbar">
+        <nav class="navbar">
 
-        <a href="index.html">Home</a>
-        <a href="order.html">Order</a>
-        <a href="#order">Go to your order</a>
-        <a href="orders.html">Orders</a>
+            <a href="index.html">Home</a>
+            <a href="order.html">Order</a>
+            <a href="#order">Go to your order</a>
+            <a href="orders.html">Orders</a>
 
-    </nav>
+        </nav>
 
-    <div class="icons">
+        <div class="icons">
 
-        <div class="fas fa-search" id="search-btn"></div>
-        <div class="fas fa-bars" id="menu-btn"></div>
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-bars" id="menu-btn"></div>
 
-    </div>
-
-    <div class="search-form">
-        <input type="search" id="search-box" placeholder="search food...">
-        <label for="search-box" class="fas fa-search"></label>
-    </div>
-
-</header>
-
-<!-- Header section ends -->
-
-
-<!-- Menu section starts -->
-<section class="menu" id="menu">
-
-    <h1 class="heading">Our <span>menu</span></h1>
-    <div class="box-container">
-        <div class="box">
-            <img src="images/item1.jpg" alt="">
-            <h3>King Burger</h3>
-            <div class="price">$6.99</div>
-            <button class="btn add-to-order-btn">Add to order</button>
         </div>
-        <div class="box">
-            <img src="images/item2.jpg" alt="">
-            <h3>Hot-Dog</h3>
-            <div class="price">$8.99</div>
-            <button class="btn add-to-order-btn">Add to order</button>
-        </div>
-        <div class="box">
-            <img src="images/item3.jpg" alt="">
-            <h3>French-Fries</h3>
-            <div class="price">$5.99</div>
-            <button class="btn add-to-order-btn">Add to order</button>
-        </div>
-        <div class="box">
-            <img src="images/item4.jpg" alt="">
-            <h3>Sandwich</h3>
-            <div class="price">$7.99</div>
-            <button class="btn add-to-order-btn">Add to order</button>
-        </div>
-        <div class="box">
-            <img src="images/item5.jpg" alt="">
-            <h3>Chicken Wings</h3>
-            <div class="price">$9.99</div>
-            <button class="btn add-to-order-btn">Add to order</button>
-        </div>
-        <div class="box">
-            <img src="images/item6.jpg" alt="">
-            <h3>Spaghetti Bolognese</h3>
-            <div class="price">$12.99</div>
-            <button class="btn add-to-order-btn">Add to order</button>
-        </div>
-        <div class="box">
-            <img src="images/item7.jpg" alt="">
-            <h3>Chicken Twister</h3>
-            <div class="price">$3.99</div>
-            <button class="btn add-to-order-btn">Add to order</button>
-        </div>
-        <div class="box">
-            <img src="images/item8.jpg" alt="">
-            <h3>Strawberry Waffle</h3>
-            <div class="price">$8.99</div>
-            <button class="btn add-to-order-btn">Add to order</button>
-        </div>
-        <div class="box">
-            <img src="images/item9.jpg" alt="">
-            <h3>Chocco Muffin</h3>
-            <div class="price">$2.99</div>
-            <button class="btn add-to-order-btn">Add to order</button>
-        </div>
-        <div class="box">
-            <img src="images/item10.jpg" alt="">
-            <h3>Fresh Steak(with fries&sauces)</h3>
-            <div class="price">$18.99</div>
-            <button class="btn add-to-order-btn">Add to order</button>
-        </div>
-        <div class="box">
-            <img src="images/item11.jpg" alt="">
-            <h3>Club Sandwich</h3>
-            <div class="price">$7.99</div>
-            <button class="btn add-to-order-btn">Add to order</button>
-        </div>
-        <div class="box">
-            <img src="images/item12.jpg" alt="">
-            <h3>Peach Pie</h3>
-            <div class="price">$10.99</div>
-            <button class="btn add-to-order-btn">Add to order</button>
-        </div>
-    </div>
-    </div>
 
-</section>
-<!-- Menu section ends -->
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="search food...">
+            <label for="search-box" class="fas fa-search"></label>
+        </div>
+
+    </header>
+
+    <!-- Header section ends -->
 
 
-<!-- Order section starts -->
-<section class="order" id="order">
-    <h1 class="heading">Your <span>Order</span></h1>
+    <!-- Menu section starts -->
+    <section class="menu" id="menu">
 
-    <div class="order-history">
-        <h2>Order History</h2>
-        <form id="store-order-form">
-            <label for="customer-name">Your Name:</label>
-            <input type="text" id="customer-name" required>
-        </form>
-        <table id="order-table">
-            <thead>
-                <tr>
-                    <th>Items</th>
-                    <th>Price</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody id="order-history-body"></tbody>
-        </table>
-        <button type="button" class="btn" id="store-order-btn">Store Order</button>
-    </div>
-</section>
-<!-- Order section ends -->
+        <h1 class="heading">Our <span>menu</span></h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="images/item1.jpg" alt="">
+                <h3>King Burger</h3>
+                <div class="price">$6.99</div>
+                <button class="btn add-to-order-btn">Add to order</button>
+            </div>
+            <div class="box">
+                <img src="images/item2.jpg" alt="">
+                <h3>Hot-Dog</h3>
+                <div class="price">$8.99</div>
+                <button class="btn add-to-order-btn">Add to order</button>
+            </div>
+            <div class="box">
+                <img src="images/item3.jpg" alt="">
+                <h3>French-Fries</h3>
+                <div class="price">$5.99</div>
+                <button class="btn add-to-order-btn">Add to order</button>
+            </div>
+            <div class="box">
+                <img src="images/item4.jpg" alt="">
+                <h3>Sandwich</h3>
+                <div class="price">$7.99</div>
+                <button class="btn add-to-order-btn">Add to order</button>
+            </div>
+            <div class="box">
+                <img src="images/item5.jpg" alt="">
+                <h3>Chicken Wings</h3>
+                <div class="price">$9.99</div>
+                <button class="btn add-to-order-btn">Add to order</button>
+            </div>
+            <div class="box">
+                <img src="images/item6.jpg" alt="">
+                <h3>Spaghetti Bolognese</h3>
+                <div class="price">$12.99</div>
+                <button class="btn add-to-order-btn">Add to order</button>
+            </div>
+            <div class="box">
+                <img src="images/item7.jpg" alt="">
+                <h3>Chicken Twister</h3>
+                <div class="price">$3.99</div>
+                <button class="btn add-to-order-btn">Add to order</button>
+            </div>
+            <div class="box">
+                <img src="images/item8.jpg" alt="">
+                <h3>Strawberry Waffle</h3>
+                <div class="price">$8.99</div>
+                <button class="btn add-to-order-btn">Add to order</button>
+            </div>
+            <div class="box">
+                <img src="images/item9.jpg" alt="">
+                <h3>Chocco Muffin</h3>
+                <div class="price">$2.99</div>
+                <button class="btn add-to-order-btn">Add to order</button>
+            </div>
+            <div class="box">
+                <img src="images/item10.jpg" alt="">
+                <h3>Fresh Steak(with fries&sauces)</h3>
+                <div class="price">$18.99</div>
+                <button class="btn add-to-order-btn">Add to order</button>
+            </div>
+            <div class="box">
+                <img src="images/item11.jpg" alt="">
+                <h3>Club Sandwich</h3>
+                <div class="price">$7.99</div>
+                <button class="btn add-to-order-btn">Add to order</button>
+            </div>
+            <div class="box">
+                <img src="images/item12.jpg" alt="">
+                <h3>Peach Pie</h3>
+                <div class="price">$10.99</div>
+                <button class="btn add-to-order-btn">Add to order</button>
+            </div>
+        </div>
+        </div>
+
+    </section>
+    <!-- Menu section ends -->
+
+
+    <!-- Order section starts -->
+    <section class="order" id="order">
+        <h1 class="heading">Your <span>Order</span></h1>
+
+        <div class="order-history">
+            <h2>Order History</h2>
+            <form id="store-order-form">
+                <label for="customer-name">Your Name:</label>
+                <input type="text" id="customer-name" required>
+            </form>
+            <table id="order-table">
+                <thead>
+                    <tr>
+                        <th>Items</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="order-history-body"></tbody>
+            </table>
+            <button type="button" class="btn" id="store-order-btn">Store Order</button>
+        </div>
+    </section>
+    <!-- Order section ends -->
 
 
 
@@ -165,6 +167,6 @@
 
     <script src="../SwiftBite/js/script.js"></script>
 
-    
 </body>
+
 </html>

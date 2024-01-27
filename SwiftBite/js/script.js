@@ -100,19 +100,21 @@ document.addEventListener("DOMContentLoaded", function () {
           );
         }, 0)
         .toFixed(2);
+        var existingOrders = JSON.parse(localStorage.getItem("currentOrder")) || [];
+        
+        // Create an order object
+        const order = {
+          customerName: customerName,
+          items: getAllOrderedItems(), // Assuming this function returns a string representation of all items
+          totalOrderPrice: totalOrderPrice,
+        };
+        
+        existingOrders.push(order);
+        localStorage.setItem('currentOrder',JSON.stringify(existingOrders));
+        
 
-      // Create an order object
-      const order = {
-        customerName: customerName,
-        items: getAllOrderedItems(), // Assuming this function returns a string representation of all items
-        totalOrderPrice: totalOrderPrice,
-      };
-
-      // Store the order in localStorage
-      localStorage.setItem("currentOrder", JSON.stringify(order));
-
-      // Navigate to orders.html
-      window.location.href = "orders.html";
+      // Refresh the page for a new order
+      window.location.href = "order.html";
     } else {
       alert("Please enter your name and add items to your order.");
     }

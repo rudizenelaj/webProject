@@ -1,3 +1,5 @@
+Open Xampp app, and start Apache allocate to localhost:81 and MySQL.
+
 -- FrontEnd --
 1. Naviate to the SwiftBite folder
 2. Navigate to index.html

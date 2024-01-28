@@ -42,9 +42,25 @@ function removeOrderByIndex(index) {
       return;
   }
 
+  var orderToBeSaved = existingOrders[index];
+  createOrder(orderToBeSaved.customerName, orderToBeSaved.items, orderToBeSaved.totalOrderPrice);
+
   // Remove the order at the specified index
   existingOrders.splice(index, 1);
 
   // Save the updated orders array back to localStorage
   localStorage.setItem('currentOrder', JSON.stringify(existingOrders));
+}
+
+// Function to create a new order
+async function createOrder(customerName, items, totalOrderPrice) {
+  const response = await fetch('http://localhost:3000/orders', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ customerName, items, totalOrderPrice })
+  });
+  const data = await response.json();
+  console.log(data);
 }

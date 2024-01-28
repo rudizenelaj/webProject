@@ -18,7 +18,22 @@ connection.connect((err) => {
 });
 
 // CRUD operations using MySQL
-// Example: Fetch all products from a table named 'products'
+
+// Create a new product
+const createProduct = (name, price) => {
+  return new Promise((resolve, reject) => {
+    const query = 'INSERT INTO products (name, price) VALUES (?, ?)';
+    connection.query(query, [name, price], (error, results) => {
+      if (error) {
+        reject(error);
+        return;
+      }
+      resolve(results.insertId); // Return the ID of the newly inserted product
+    });
+  });
+};
+
+// Read all products
 const getAllProducts = () => {
   return new Promise((resolve, reject) => {
     connection.query('SELECT * FROM products', (error, results) => {
@@ -31,7 +46,38 @@ const getAllProducts = () => {
   });
 };
 
-// Export the getAllProducts function
+// Update an existing product
+const updateProduct = (productId, name, price) => {
+  return new Promise((resolve, reject) => {
+    const query = 'UPDATE products SET name = ?, price = ? WHERE id = ?';
+    connection.query(query, [name, price, productId], (error, results) => {
+      if (error) {
+        reject(error);
+        return;
+      }
+      resolve(results.affectedRows > 0); // Return true if the product was updated successfully
+    });
+  });
+};
+
+// Delete a product
+const deleteProduct = (productId) => {
+  return new Promise((resolve, reject) => {
+    const query = 'DELETE FROM products WHERE id = ?';
+    connection.query(query, [productId], (error, results) => {
+      if (error) {
+        reject(error);
+        return;
+      }
+      resolve(results.affectedRows > 0); // Return true if the product was deleted successfully
+    });
+  });
+};
+
+// Export CRUD functions
 module.exports = {
-  getAllProducts
+  createProduct,
+  getAllProducts,
+  updateProduct,
+  deleteProduct
 };
